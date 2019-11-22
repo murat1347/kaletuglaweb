@@ -1,0 +1,36 @@
+<head><style type="text/css">
+    /*<![CDATA[*/
+    /* Site Efektleri */
+    #zoom img {
+    
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    
+    }
+            
+    #zoom img:hover {
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    
+    }
+    
+    /*]]>*/
+    </style></head>
+{% extends "navbar.html" %}
+{% load static %}
+
+
+{% block body %}<br>
+
+{% for urun in urunler %}
+{{ urun.id }}
+{{ urun.urunismi }}
+{{ urun.urun_content }}
+{% endfor %}
+
+{% endblock body %}s
