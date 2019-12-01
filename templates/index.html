@@ -1,30 +1,328 @@
-<html>
-  {% load static %}
-  <head>
-    <meta charset="utf-8">
-    <title>Kale Tuğla</title>
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Vollkorn:700italic,400' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-  </head>
-  <body><br>
-    <header>
-      <a href="/" class="logo">
-        <em>Kale</em><strong>Tuğla</strong>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="/hakkimizda">Hakkımızda</a></li>
-          <li><a href="/urunler">Ürünlerimiz</a></li>
-          <li><a href="/iletisim">İletişim</a></li>
-        </ul>       
-      </nav>
-    </header>
-    <section>
-      <h1>Welcome to <em>Kale Tuğla</em></h1>
-      <p>Bir Tuğladan daha fazlası...</p>
-      
+﻿{% extends "navbar.html" %}
+
+<!DOCTYPE html>
+{% load static %}
+{% block body %}
+    <div role="main" class="main">
+                <div class="slider-container rev_slider_wrapper" style="height: 700px;">
+                    <div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider data-plugin-options='{"gridwidth": 800, "gridheight": 700}'>
+                        <ul>
+                            <li data-transition="fade">
+                                <img src="{% static 'img/slides/tuglafab.jpg' %}"
+                                     alt=""
+                                     data-bgposition="center center"
+                                     data-bgfit="cover"
+                                     data-bgrepeat="no-repeat"
+                                     class="rev-slidebg">
+
+                                <div class="tp-caption"
+                                     data-x="center" data-hoffset="-150"
+                                     data-y="center" data-voffset="-95"
+                                     data-start="1000"
+                                     style="z-index: 5"
+                                     data-transform_in="x:[-300%];opacity:0;s:500;"><img src="{% static 'img/slides/slide-title-border.png'%}" alt=""></div>
+
+                                <div class="tp-caption top-label"
+                                     data-x="center" data-hoffset="0"
+                                     data-y="center" data-voffset="-95"
+                                     data-start="500"
+                                     style="z-index: 5"
+                                     data-transform_in="y:[-300%];opacity:0;s:500;">KALE TUĞLA</div>
+
+                                <div class="tp-caption"
+                                     data-x="center" data-hoffset="150"
+                                     data-y="center" data-voffset="-95"
+                                     data-start="1000"
+                                     style="z-index: 5"
+                                     data-transform_in="x:[300%];opacity:0;s:500;"><img src="{% static 'img/slides/slide-title-border.png' %}" alt=""></div>
+
+                                <div class="tp-caption main-label"
+                                     data-x="center" data-hoffset="0"
+                                     data-y="center" data-voffset="-45"
+                                     data-start="1500"
+                                     data-whitespace="nowrap"
+                                     data-transform_in="y:[100%];s:500;"
+                                     data-transform_out="opacity:0;s:500;"
+                                     style="z-index: 5"
+                                     data-mask_in="x:0px;y:0px;">TUĞLA FABRİKAMIZ</div>
+
+                                <div class="tp-caption bottom-label"
+                                     data-x="center" data-hoffset="0"
+                                     data-y="center" data-voffset="5"
+                                     data-start="2000"
+                                     style="z-index: 5"
+                                     data-transform_in="y:[100%];opacity:0;s:500;">Dünyanın en güzel ve müthiş harika tuğlaları.</div>
+
+                                <a class="tp-caption btn btn-lg btn-primary btn-slider-action"
+                                   data-hash
+                                   data-hash-offset="85"
+                                   href="#home-intro"
+                                   data-x="center" data-hoffset="0"
+                                   data-y="center" data-voffset="80"
+                                   data-start="2200"
+                                   data-whitespace="nowrap"
+                                   data-transform_in="y:[100%];s:500;"
+                                   data-transform_out="opacity:0;s:500;"
+                                   style="z-index: 5"
+                                   data-mask_in="x:0px;y:0px;">İncele</a>
+
+                            </li>
+
+                            <li data-transition="fade">
+                                <img src="{% static 'img/slides/tuglafab2.png' %}"
+                                     alt=""
+                                     data-bgposition="center center"
+                                     data-bgfit="cover"
+                                     data-bgrepeat="no-repeat"
+                                     class="rev-slidebg">
+
+                                <div class="rs-ackground-video-layer"
+                                     data-forcerewind="on"
+                                     data-volume="mute"
+                                     data-videowidth="100%"
+                                     data-videoheight="100%"
+                                     data-videomp4=""
+                                     data-videopreload="preload"
+                                     data-videoloop="none"
+                                     data-forceCover="1"
+                                     data-aspectratio="16:9"
+                                     data-autoplay="true"
+                                     data-autoplayonlyfirsttime="false"
+                                     data-nextslideatend="true"></div>
+
+                                <div class="tp-caption"
+                                     data-x="center" data-hoffset="-160"
+                                     data-y="center" data-voffset="-95"
+                                     data-start="1000"
+                                     style="z-index: 5"
+                                     data-transform_in="x:[-300%];opacity:0;s:500;"><img src="{% static 'img/slides/slide-title-border.png' %}" alt=""></div>
+
+                                <div class="tp-caption top-label"
+                                     data-x="center" data-hoffset="0"
+                                     data-y="center" data-voffset="-95"
+                                     data-start="500"
+                                     style="z-index: 5"
+                                     data-transform_in="y:[-300%];opacity:0;s:500;">KALE TUĞLA</div>
+
+                                <div class="tp-caption"
+                                     data-x="center" data-hoffset="160"
+                                     data-y="center" data-voffset="-95"
+                                     data-start="1000"
+                                     style="z-index: 5"
+                                     data-transform_in="x:[300%];opacity:0;s:500;"><img src="{% static 'img/slides/slide-title-border.png' %}" alt=""></div>
+
+                                <div class="tp-caption main-label"
+                                     data-x="center" data-hoffset="0"
+                                     data-y="center" data-voffset="-45"
+                                     data-start="1500"
+                                     data-whitespace="nowrap"
+                                     data-transform_in="y:[100%];s:500;"
+                                     data-transform_out="opacity:0;s:500;"
+                                     style="z-index: 5"
+                                     data-mask_in="x:0px;y:0px;">TUĞLA FABRİKAMIZ</div>
+
+                                <div class="tp-caption bottom-label"
+                                     data-x="center" data-hoffset="0"
+                                     data-y="center" data-voffset="5"
+                                     data-start="2000"
+                                     style="z-index: 5"
+                                     data-transform_in="y:[100%];opacity:0;s:500;">Tuğla bizim işimiz</div>
+
+                                <a class="tp-caption btn btn-lg btn-primary btn-slider-action"
+                                   data-hash
+                                   data-hash-offset="85"
+                                   href="#home-intro"
+                                   data-x="center" data-hoffset="0"
+                                   data-y="center" data-voffset="80"
+                                   data-start="2200"
+                                   data-whitespace="nowrap"
+                                   data-transform_in="y:[100%];s:500;"
+                                   data-transform_out="opacity:0;s:500;"
+                                   style="z-index: 5"
+                                   data-mask_in="x:0px;y:0px;">İncele</a>
+
+                                <!--<div class="tp-dottedoverlay tp-opacity-overlay"></div>-->
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="home-intro" id="home-intro">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>
+                                    Mükemmel, enfes, harika <em>Tuglalar</em>
+                                    <span>Ürünlere göz atmak için butona tıkla.</span>
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mt-lg mb-xl">
+                                    <a href="#tuglaCesitleri" data-hash class="btn btn-primary mr-md appear-animation" data-appear-animation="fadeInDown" data-appear-animation-delay="300">ÜRÜNLERE GÖZ AT</a> <span class="appear-animation" data-appear-animation="fadeInDown" data-appear-animation-delay="600">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12 center">
+                            <h2 class="word-rotator-title mb-sm">
+                                Kale Tuğla <strong>
+                                    en <span class="word-rotate" data-plugin-options='{"delay": 2000, "animDelay": 300}'>
+                                        <span class="word-rotate-items">
+                                            <span>güzel</span>
+                                            <span>dayanıklı</span>
+                                            <span>göz alıcı</span>
+                                        </span>
+                                    </span>
+                                </strong> tuğlaları üretir.
+                            </h2>
+                            <p class="lead">Fabrikamız 200 çalışanı, 2500 günlük üretimi, 3000 cirosu<br>ile büyümesine devam etmektedir.</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-xl">
+                        <div class="counters counters-text-dark">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+                                    <i class="fa fa-user"></i>
+                                    <strong data-to="200" data-append="+">0</strong>
+                                    <label>Personel</label>
+                                    <p class="text-color-primary mb-xl">Hepsi işinin ehli</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 col-sm-6">
+                                <div class="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="900">
+                                    <i class="fa fa-stack-overflow"></i>
+                                    <strong data-to="2500" data-append="+">0</strong>
+                                    <label>Günlük Üretim</label>
+                                    <p class="text-color-primary mb-xl">Kaliteli Tuğlalar</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="1200">
+                                    <i class="fa fa-try"></i>
+                                    <strong data-to="3000" data-append="+">0</strong>
+                                    <label>Ciro</label>
+                                    <p class="text-color-primary mb-xl">Herkes Bizden Alıyor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <section class="section section-default section-with-mockup mb-none" id="tuglaCesitleri">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 urunlerBaslik">
+                                    BAZI<span> ÜRÜNLERİMİZ</span>
+                                </div>
+                                <div class="col-md-12">
+                                <div class="owl-carousel owl-theme" data-plugin-options='{"items": 4, "margin": 20}'>
+                                        <div>
+                                            <a>
+                                                <span class="thumb-info">
+                                                    <span class="thumb-info">
+                                                        <img src="{% static 'img/urunler/yigma-tugla.png' %}" class="img-responsive" alt="">
+                                                        <span class="thumb-info-title">
+                                                            <span class="thumb-info-inner">YIĞMA TUĞLA</span>
+                                                        </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a>
+                                            <span class="thumb-info">
+                                                <span class="thumb-info">
+                                                    <img src="{% static 'img/urunler/kare-baca-tuglasi.png' %}" class="img-responsive" alt="">
+                                                    <span class="thumb-info-title">
+                                                        <span class="thumb-info-inner">KARE BACA TUĞLASI</span>
+                                                        <!--<span class="thumb-info-type">Brand</span>-->
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a>
+                                            <span class="thumb-info">
+                                                <span class="thumb-info">
+                                                    <img src="{% static 'img/urunler/baca-tuglasi.png' %}" class="img-responsive" alt="">
+                                                    <span class="thumb-info-title">
+                                                        <span class="thumb-info-inner">BACA TUĞLASI</span>
+                                                        <!--<span class="thumb-info-type">Logo</span>-->
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a>
+                                            <span class="thumb-info">
+                                                <span class="thumb-info">
+                                                    <img src="{% static 'img/urunler/asmolen.png' %}" class="img-responsive" alt="">
+                                                    <span class="thumb-info-title">
+                                                        <span class="thumb-info-inner">ASMOLEN</span>
+                                                        <!--<span class="thumb-info-type">Website</span>-->
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a>
+                                            <span class="thumb-info">
+                                                <span class="thumb-info">
+                                                    <img src="{% static 'img/urunler/onucbucukluk-tugla.png' %}" class="img-responsive" alt="">
+                                                    <span class="thumb-info-title">
+                                                        <span class="thumb-info-inner">13.5'LUK BLOK TUĞLA</span>
+                                                        <!--<span class="thumb-info-type">Website</span>-->
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a>
+                                            <span class="thumb-info">
+                                                <span class="thumb-info">
+                                                    <img src="{% static 'img/urunler/sekizbucukluk-tugla.png' %}" class="img-responsive" alt="">
+                                                    <span class="thumb-info-title">
+                                                        <span class="thumb-info-inner">8.5'LUK BLOK TUĞLA</span>
+                                                        <!--<span class="thumb-info-type">Website</span>-->
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--<hr class="tall">-->
+    
+                            </div>
+                        </div>   
+                            <div class="col-md-12" align="center">
+                                <div class="mt-lg mb-xl">
+                                    <a href="/urunler" data-hash class="btn btn-primary mr-md appear-animation" data-appear-animation="fadeInDown" data-appear-animation-delay="0">ÜRÜNLERE GÖZ AT</a> <span class="appear-animation" data-appear-animation="fadeInDown" data-appear-animation-delay="600">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                            <!--<hr class="tall">-->
+
+                </div>
+            </div>                  
+         </div>
     </section>
-  </body>
+</div>
+       
+     {% endblock body %}
+     
+
 </html>

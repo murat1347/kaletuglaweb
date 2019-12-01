@@ -1,0 +1,76 @@
+{% extends "navbar.html" %}
+{% load static %}
+{% block body %}
+<div role="main" class="main">
+
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Anasayfa</a></li>
+                        <li class="active">Blog</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Yazılar</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% for yazi in yazilar %}
+    <div class="container">
+   
+     <div class="row">
+        <div class="col-md-12">
+            <div class="blog-posts">
+
+                <article class="post post-medium">
+                    <div class="row">
+
+                        <div class="col-md-5">
+                            <div class="post-image">
+                                <div class="owl-theme" data-plugin-options='{"items":1}'>
+                                    <div>
+                                        <div class="img-thumbnail">
+                                            <img class="img-responsive" src="media/{{yazi.yazi_resmi}}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+
+                            <div class="post-content">
+
+                                <h2><a href="yazilar/{{yazi.id}}">{{yazi.title|upper}}</a></h2>
+                                {{yazi.content|safe|truncatewords:50}}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post-meta">
+                                <span><i class="fa fa-calendar"></i>{{yazi.created_date}} </span>
+                                <a href="yazilar/{{yazi.id}}" class="btn btn-xs btn-primary pull-right">Devamını Oku...</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </article>
+                
+              
+
+            </div>
+
+
+            </div>
+        </div>
+
+    </div>{% endfor %}
+
+</div>
+{% endblock body %}

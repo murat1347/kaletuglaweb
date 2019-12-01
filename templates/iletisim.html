@@ -1,13 +1,212 @@
-{% extends "navbar.html" %}
-{% load static %}
+﻿{% extends "navbar.html" %}
+<!DOCTYPE html>
+<html>
+        {% load static %}
+        {% block body %}
+         <div role="main" class="main">
 
+                <section class="page-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="breadcrumb">
+                                    <li><a href="index.html">Anasayfa</a></li>
+                                    <li class="active">İletişim</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>İletişim</h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-{% block body %}<br>
-<center>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12067.951795103445!2d26.620105739514614!3d40.87213867197346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe2123f2e8124b81!2sKale%20Tu%C4%9Fla%20Fabrikasi!5e0!3m2!1str!2str!4v1574168338968!5m2!1str!2str" width="900" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe><br>
-<h3>Merkez: İSTASYON MAH. LONDRA CAD  NO: 43/B    KEŞAN / EDİRNE<br>
+                <!-- Google Maps - Go to the bottom of the page to change settings and map location.
+        <div id="googlemaps" class="google-map"></div>
+            -->
+            <div class="container">
 
-T: +90 284 714 14 41
-</h3>
-</center>
-{% endblock body %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.838374454609!2d26.616750215659028!3d40.87542103553809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b3c7db38a2f36f%3A0xfe2123f2e8124b81!2sKale%20Tu%C4%9Fla%20Fabrikasi!5e0!3m2!1str!2str!4v1574251616267!5m2!1str!2str" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <hr />
+                        <h4 class="heading-primary">İletişim <strong>Bilgileri</strong></h4>
+                        <ul class="list list-icons list-icons-style-3 mt-xlg">
+                            <li><i class="fa fa-map-marker"></i> <strong>Addres:</strong> İstasyon Mah. Londra Cad. No:43/B Keşan/Edirne</li>
+                            <li><i class="fa fa-phone"></i> <strong>Telefon:</strong> +90 284 714 14 41</li>
+                            <li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:kesankaletugla@gmail.com">kesankaletugla@gmail.com</a></li>
+                        </ul>
+
+                        <hr>
+
+                        <h4 class="heading-primary">Çalışma <strong>Saatleri</strong></h4>
+                        <ul class="list list-icons list-dark mt-xlg">
+                            <li><i class="fa fa-clock-o"></i> Pazartesi - Cuma 09:00 - 17:00</li>
+                            <li><i class="fa fa-clock-o"></i> Cumartesi - 09:00 - 14:00</li>
+                            <li><i class="fa fa-clock-o"></i> Pazar - <b>Kapalı</b></li>
+                        </ul>
+                        <hr />
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="alert alert-success hidden" id="contactSuccess">
+                            <strong>Başarılı!</strong> Mesajınız tarafımıza gönderildi.
+                        </div>
+
+                        <div class="alert alert-danger hidden" id="contactError">
+                            <strong>Hata!</strong> Mesajınızı gönderirken bir hata oluştu.
+                        </div>
+
+                        <h2 class="mb-sm mt-sm">Bize <strong>Yazın</strong></h2>
+                        <form id="contactForm" action="php/contact-form.php" method="POST">
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label>Adınız Soyadınız *</label>
+                                        <input type="text" value="" data-msg-required="Lütfen adınızı giriniz." maxlength="100" class="form-control" name="name" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Mail adresiniz *</label>
+                                        <input type="email" value="" data-msg-required="Lütfen mail adresinizi giriniz." data-msg-email="Lütfen geçerli bir mail adresi giriniz." maxlength="100" class="form-control" name="email" id="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label>Konu *</label>
+                                        <input type="text" value="" data-msg-required="Lütfen konu giriniz." maxlength="100" class="form-control" name="subject" id="subject" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label>Mesajınız *</label>
+                                        <textarea maxlength="5000" data-msg-required="Lütfen mesajınızı giriniz." rows="10" class="form-control" name="message" id="message" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" value="Gönder" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Yükleniyor...">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <br />
+                        <br />
+                        <br />
+                        <hr />
+                        <br />
+                        <h4 class="heading-primary mt-lg">Sosyal <strong>Medya</strong></h4>
+                        <ul class="list list-icons list-icons-style-3 mt-xlg">
+                            <li><i class="social-icons-facebook"></i><a target="_blank" href="https://www.facebook.com/Kale-Tu%C4%9Fla-112379116888116/" title="Facebook"><i class="fa fa-facebook"></i>https://www.facebook.com/kesankaletugla</a></li>
+                            <li><i class="social-icons-twitter"></i><a target="_blank" href="http://twitter.com/kaletugla" title="Twitter"><i class="fa fa-twitter"></i>http://twitter.com/kaletugla</a></li>
+                            <li><i class="social-icons-linkedin"></i><a target="_blank" href="https://www.linkedin.com/company/kaletugla" title="Linkedin"><i class="fa fa-linkedin"></i>https://www.linkedin.com/company/kaletugla</a></li>
+                            <li><i class="social-icons-linkedin"></i><a target="_blank" href="https://www.instagram.com/kaletugla" title="Instagram"><i class="fa fa-instagram"></i>https://www.instagram.com/kaletugla</a></li>
+
+                        </ul>
+                        <br />
+                        <br />
+                        <hr />
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--<section class="call-to-action call-to-action-default with-button-arrow call-to-action-in-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="call-to-action-content">
+                    <h3>Porto is <strong>everything</strong> you need to create an <strong>awesome</strong> website!</h3>
+                    <p>The <strong>#1 Selling</strong> HTML Site Template on ThemeForest</p>
+                </div>
+                <div class="call-to-action-btn">
+                    <a href="http://themeforest.net/item/porto-responsive-html5-template/4106987" target="_blank" class="btn btn-lg btn-primary">Buy Now!</a><span class="arrow hlb hidden-xs hidden-sm hidden-md" data-appear-animation="rotateInUpLeft" style="top: -12px;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </section>-->
+
+           
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script>
+
+			/*
+			Map Settings
+
+				Find the Latitude and Longitude of your address:
+					- http://universimmedia.pagesperso-orange.fr/geo/loc.htm
+					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+			*/
+
+			// Map Markers
+			var mapMarkers = [{
+				address: "New York, NY 10017",
+				html: "<strong>New York Office</strong><br>New York, NY 10017",
+				icon: {
+					image: "img/pin.png",
+					iconsize: [26, 46],
+					iconanchor: [12, 46]
+				},
+				popup: true
+			}];
+
+			// Map Initial Location
+			var initLatitude = 40.875421;
+			var initLongitude = 26.6167502;
+
+			// Map Extended Settings
+			var mapSettings = {
+				controls: {
+					draggable: (($.browser.mobile) ? false : true),
+					panControl: true,
+					zoomControl: true,
+					mapTypeControl: true,
+					scaleControl: true,
+					streetViewControl: true,
+					overviewMapControl: true
+				},
+				scrollwheel: false,
+				markers: mapMarkers,
+				latitude: initLatitude,
+				longitude: initLongitude,
+				zoom: 16
+			};
+
+			var map = $("#googlemaps").gMap(mapSettings);
+
+			// Map Center At
+			var mapCenterAt = function(options, e) {
+				e.preventDefault();
+				$("#googlemaps").gMap("centerAt", options);
+			}
+
+		</script>
+
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		 -->
+
+	     {% endblock body %}
+</html>

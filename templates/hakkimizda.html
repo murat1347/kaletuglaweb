@@ -1,5 +1,155 @@
-{% extends "navbar.html" %}
+﻿{% extends "navbar.html" %}
+<!DOCTYPE html>
 
-{% block body %}
-murat çiçek
+ {% load static %}
+    {% block body %}
+        <div role="main" class="main">
+
+            <section class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="breadcrumb">
+                                <li><a href="#">Anasayfa</a></li>
+                                <li class="active">Hakkımızda</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Hakkımızda</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+
+                <div class="col-md-12">
+                    <div class="heading heading-border heading-middle-border heading-middle-border-center">
+                        <h2><strong>KURUCULARIMIZ</strong></h2>
+                    </div>
+                    <br />
+                </div>
+
+                    <div class="col-md-3">
+                        <img class="img-responsive proccess-image img-circle mb-lg pull-left appear-animation pull-left fadeInDown appear-animation-visible"  src="{% static 'img/kurucular/ali-kale.jpeg' %}" alt="Project Image">
+                        <div class="kurucularBaslik">Ali <span>KALE</span></div>
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-responsive proccess-image img-circle mb-lg appear-animation pull-left fadeInDown appear-animation-visible"  src="{% static 'img/kurucular/rasim-kale.jpeg' %}" alt="Project Image">
+                        <div class="kurucularBaslik">Rasim <span>KALE</span></div>
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-responsive proccess-image img-circle mb-lg appear-animation pull-left fadeInDown appear-animation-visible"  src="{% static 'img/kurucular/hasan-kale.jpeg' %}" alt="Project Image">
+                        <div class="kurucularBaslik">Hasan <span>KALE</span></div>
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-responsive proccess-image img-circle mb-lg appear-animation pull-left fadeInDown appear-animation-visible"  src="{% static 'img/kurucular/huseyin-kale.jpeg' %}" alt="Project Image">
+                        <div class="kurucularBaslik">Hüseyin <span>KALE</span></div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr class="tall">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="heading-primary mt-xl"><strong>Tarihçemiz</strong></h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <ul class="history">
+                                <li class="appear-animation" data-appear-animation="bounceInUp">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/hakkimizda/su-degirmen.png' %}" alt="" />
+                                    </div>
+                                    <div class="featured-box">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary"><strong>19.YY</strong></h4>
+                                            <p>sonlarında Bulgaristan'da başlayan su değirmenciliği</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="appear-animation" data-appear-animation="bounceInUp">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/hakkimizda/turkiye.png' %}" alt="" />
+                                    </div>
+                                    <div class="featured-box">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary"><strong>1927</strong></h4>
+                                            <p>de Türkiye'ye göç ediş</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="appear-animation" data-appear-animation="bounceInUp">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/hakkimizda/maden.png' %}" alt="" />
+                                    </div>
+                                    <div class="featured-box">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary"><strong>1950</strong></h4>
+                                            <p>Ali, Rasim, Hasan ve Hüseyin KALE'nin temellerini attığı birliktelik. Madencilikle tanışma</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="appear-animation" data-appear-animation="bounceInUp">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/hakkimizda/un-degirmen.png' %}" alt="" />
+                                    </div>
+                                    <div class="featured-box">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary"><strong>1951</strong></h4>
+                                            <p>yılında Yeni Muhacır'da Kara Un Değirmenciliği</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="appear-animation" data-appear-animation="bounceInUp">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/hakkimizda/kale.png' %}" alt="" />
+                                    </div>
+                                    <div class="featured-box">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary"><strong>1981</strong></h4>
+                                            <p>yılında Kale Madencilik Sanayi ve Ticaret A.Ş. kuruluşu</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="appear-animation" data-appear-animation="bounceInUp">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/hakkimizda/un.png' %}" alt="" />
+                                    </div>
+                                    <div class="featured-box">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary"><strong>1984</strong></h4>
+                                            <p>te Kale Un Fabrikası'nın faaliyete geçmesi</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="appear-animation" data-appear-animation="bounceInUp">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/hakkimizda/tugla.png' %}" alt="" />
+                                    </div>
+                                    <div class="featured-box">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary"><strong>1989</strong></h4>
+                                            <p>da Kale Tuğla Fabrikası'nın faaliyete geçmesi</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
 {% endblock body %}
+</html>

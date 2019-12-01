@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from article import views
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
@@ -24,4 +25,7 @@ urlpatterns = [
     path('iletisim', views.iletisim),
     path('urunler', views.urunler),
     path('urundetay/<int:id>',views.urundetay),
+    path('blog',views.blog,name = "blogpage"),
+    path('yazilar/<int:id>',views.yazilar),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

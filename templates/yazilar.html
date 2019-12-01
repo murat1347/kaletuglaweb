@@ -1,0 +1,70 @@
+{% extends "navbar.html" %}
+{% load static %}
+{% block body %}
+
+
+<div role="main" class="main">
+
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Anasayfa</a></li>
+                        <li class="active">Blog Detay</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Blog Detay</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="geriTusu">
+        <button type="button" class="mb-xs mt-xs mr-xs btn btn-info" onclick="history.back(-1)"><i class="fa fa-arrow-left"></i>&nbsp;Geri</button>
+    </div>
+    <br />
+
+    <div class="container">
+
+        <div class="row">
+            
+            <div class="col-md-12">
+                
+                <div class="blog-posts single-post">
+
+                    <article class="post post-large blog-single-post">
+                        <div class="post-image">
+                            <div class="" data-plugin-options='{"items":1}'>
+                                <div>
+                                    <div class="img-thumbnail">
+                                        <img class="img-responsive" src="/media/{{yazi.yazi_resmi}}" alt="">
+                                  
+                                    </div>
+                        
+                                </div>
+                            </div> 
+                        </div> 
+
+                        <div class="post-content">
+
+                            <h2>{{yazi.title|upper}}</h2>                    
+
+                            {{yazi.content|safe}}
+
+
+                       
+                    </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock body %}

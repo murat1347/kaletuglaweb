@@ -1,10 +1,119 @@
 {% extends "navbar.html" %}
-{% load static %}
+<!DOCTYPE html>
+<html>
+        {% load static %}
+        {% block body %}
+<div role="main" class="main">
 
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Anasayfa</a></li>
+                        <li class="active">Ürün Detay</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Ürün Detay</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="geriTusu">
+        <button type="button" class="mb-xs mt-xs mr-xs btn btn-info" onclick="history.back(-1)"><i class="fa fa-arrow-left"></i>&nbsp;Geri</button>
+    </div>
+    <div class="container">
 
-{% block body %}<br>
-{{ urun.urunismi }}
-{{ urun.urun_content }}
-{{ urun.id }}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="portfolio-title">
+                    <div class="row">
+                        <div class="col-md-12 center">
+                            <h2 class="mb-none"><strong>{{urun.urunismi}}</strong></h2>
+                        </div>                              
+                    </div>
+                </div>
 
+                <hr class="tall">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">                     
+                <div class="portfolio-item">                       
+                        <span class="thumb-info">
+                            <span class="thumb-info">
+                                <img src="/media/{{ urun.urun_resmi }}" class="img-responsive" alt="">
+                            </span>
+                        </span>                          
+                </div>          
+            </div>
+
+            <div class="col-md-8">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>
+                            İsim
+                        </th>
+                        <td>
+                                {{urun.urunismi}}
+                        </td>
+
+                    </tr>
+                    <th colspan="2">
+                        Ölçüler (cm)
+                    </th>
+                    <tr>
+                        <th>
+                            En
+                        </th>
+                        <td>
+                            {{urun.urun_en}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Yükseklik
+                        </th>
+                        <td>
+                            {{urun.urun_yukseklik}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Boy
+                        </th>
+                        <td>
+                            {{urun.urun_boy}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Ağırlık (kg)
+                        </th>
+                        <td>
+                            {{urun.urun_agirlik}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br>
+                            {{urun.urun_content}}
+                            <br />
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
 {% endblock body %}
+</html>

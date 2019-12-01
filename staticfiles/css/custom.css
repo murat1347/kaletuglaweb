@@ -1,0 +1,14 @@
+/* Add here all your CSS customizations */
+
+.urunlerBaslik {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+    .urunlerBaslik span {
+        color:#d85515;
+    }
