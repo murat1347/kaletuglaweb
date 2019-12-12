@@ -23,9 +23,11 @@ urlpatterns = [
     path('', views.index),
     path('hakkimizda', views.hakkimizda),
     path('iletisim', views.iletisim),
+    path('success', views.success),
     path('urunler', views.urunler),
     path('urundetay/<int:id>',views.urundetay),
     path('blog',views.blog,name = "blogpage"),
     path('yazilar/<int:id>',views.yazilar),
+ 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

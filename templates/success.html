@@ -1,4 +1,4 @@
-﻿{% extends "navbar.html" %}
+{% extends "navbar.html" %}
 <!DOCTYPE html>
 <html>
         {% load static %}
@@ -62,13 +62,9 @@
                         </div>
 
                         <h2 class="mb-sm mt-sm">Bize <strong>Yazın</strong></h2>
-                        <form role="form" action=""  method="post">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            
-                          <div class="form-actions">
-                                    <input type="submit" value="Gönder" class="btn btn-primary btn-lg mb-xlg">
-                                </div>
+                        <h3 class="alert alert-success">
+                        <strong>Başarılı!</strong> Mesajınız tarafımıza gönderildi.</h3>
+                       
                                 
                         </form>
                     </div>

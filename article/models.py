@@ -1,6 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
-# Create your models here.
+from django import forms
 
 class Blog(models.Model):
     id = models.AutoField(primary_key=True)
