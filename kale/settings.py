@@ -139,8 +139,8 @@ CKEDITOR_CONFIGS = {
 }
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'xfireware@gmail.com'
-EMAIL_HOST_PASSWORD = 'alex2020'    
+EMAIL_HOST_USER = 'kesankaletugla@gmail.com'
+EMAIL_HOST_PASSWORD = 'Kale.tuglA9'    
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

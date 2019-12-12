@@ -28,7 +28,7 @@ def iletisim(request):
             contact_message="Gönderen : {0} \n  Email : {1} \n  Başlık : {2}\n Mesaj içeriği : {3}\n".format(name,email,title,message)
             
             try:
-                send_mail(title,contact_message,settings.EMAIL_HOST_USER,['xfireware@gmail.com'],fail_silently=True)
+                send_mail(title,contact_message,settings.EMAIL_HOST_USER,['kesankaletugla@gmail.com'],fail_silently=True)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return HttpResponseRedirect('/success')
