@@ -211,10 +211,11 @@ li {
 }
 
 #header .header-nav-top .nav > li > a, #header .header-nav-top .nav > li > span {
-	color: #999;
-	font-size: 0.9em;
+	color: white;
+	font-size: 1.0em;
 	padding: 6px 10px;
 	display: inline-block;
+	background: #d65413;
 }
 
 #header .header-nav-top .nav > li > a .fa, #header .header-nav-top .nav > li > a .icons, #header .header-nav-top .nav > li > span .fa, #header .header-nav-top .nav > li > span .icons {
