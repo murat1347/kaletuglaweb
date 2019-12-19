@@ -1792,7 +1792,7 @@ html .inverted-light {
 
 .owl-carousel .owl-dots .owl-dot.active span,
 .owl-carousel .owl-dots .owl-dot:hover span {
-    background-color: #d85616;
+	background-color: #d85616;
 }
 
 .owl-carousel.show-nav-title .owl-nav [class*="owl-"] {
@@ -4152,7 +4152,7 @@ section.timeline .timeline-box.right:before {
 }
 
 ul.history li .featured-box .box-content {
-    border-top-color: #d85515;
+	border-top-color: #d84700;
 }
 
 .recent-posts .date .month,

@@ -638,25 +638,24 @@ html.boxed .nav-secondary.sticky-active {
 }
 
 .btn-info {
-	border-color: #5bc0de;
-	background-color: #5bc0de;
-	border-color: #5bc0de #5bc0de #31b0d5;
-	color: #FFF;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: #752f0d;
+    background-color: #d85614;
+    border-color: #ffffff #ff9967 #752f0d;
+    color: #FFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
 .btn-info:hover {
-	border-color: #70c8e2 #70c8e2 #46b8da;
-	background-color: #70c8e2;
-	color: #FFF;
+     border-color: #ffffff #ff9967 #752f0d;
+     background-color: #d67747;
+     color: #FFF;
 }
 
 .btn-info:active, .btn-info:focus {
-	border-color: #46b8da;
-	background-color: #46b8da;
+	border-color: #752f0d;
+	background-color: #d67747;
 	color: #FFF;
 }
-
 .btn-info.dropdown-toggle {
 	border-left-color: #46b8da;
 }
